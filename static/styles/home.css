@@ -1,0 +1,416 @@
+.top-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	height:500px;
+	position: relative;
+	flex: 1;
+	
+	box-sizing: border-box;
+	background: linear-gradient(to bottom right,#E7F3F8,#E9E5FA);
+}
+@media(min-width:786px){
+	.top-section{height: 1260px;}
+}
+.hero {
+	width: 100%;
+	height: 13em;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+@media (orientation:landscape ) and (max-height:900px){
+	main{height:calc(100vw - 7em)}
+	
+}
+.hero-slide-cont img {
+	width: 100%;
+	height: 100%;
+}
+
+.hero-slide-cont {
+	height: 90%;
+	width: 100%;
+	display: flex;
+	position: relative;
+	z-index: 1;
+
+	overflow: hidden;
+	align-items: flex-start;
+	
+	
+}
+
+.hero-slide-cont>div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 1;
+}
+
+/* Hero Indicators */
+.hero-indicator-cont {
+	width: 50%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap:0.5em;
+	align-self: center;
+	
+}
+
+.hero-indicator {
+	height: 0.3em;
+	width: 0.3em;
+	background-color: var(--indicator-bg);
+	transform: rotateZ(45deg);
+	animation: 40s infinite slideIndicator;
+	
+}
+
+/* Indicator timing - 8 indicators × 5s each = 40s total */
+#img1 {
+	animation-delay: 0s;
+}
+
+#img2 {
+	animation-delay: 5s;
+}
+
+#img3 {
+	animation-delay: 10s;
+}
+
+#img4 {
+	animation-delay: 15s;
+}
+
+#img5 {
+	animation-delay: 20s;
+}
+
+#img6 {
+	animation-delay: 25s;
+}
+
+#img7 {
+	animation-delay: 30s;
+}
+
+#img8 {
+	animation-delay: 35s;
+}
+
+@keyframes slideIndicator {
+	0% {
+		background:var(--primary-text-color);
+		/* Active state */
+	}
+
+	12.5% {
+		/* 5s / 40s = 12.5% */
+		background: var(--primary-text-color);
+		/* Stay active for 5s */
+	}
+
+	12.6% {
+		background:var(--indicator-bg) ;
+		/* Turn inactive */
+	}
+
+	100% {
+		background: var(--indicator-bg);
+		/* Remain inactive */
+	}
+}
+
+/* Base styles for all slideshow images */
+[id*="hero-img"] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: translateX(100%);
+	opacity: 0;
+	z-index: 1;
+	animation: 40s infinite linear slideShow;
+}
+
+/* Individual image delays (8 images × 5s each = 40s total) */
+#hero-img1 {
+	animation-delay: 0s;
+}
+
+#hero-img2 {
+	animation-delay: 5s;
+}
+
+#hero-img3 {
+	animation-delay: 10s;
+}
+
+#hero-img4 {
+	animation-delay: 15s;
+}
+
+#hero-img5 {
+	animation-delay: 20s;
+}
+
+#hero-img6 {
+	animation-delay: 25s;
+}
+
+#hero-img7 {
+	animation-delay: 30s;
+}
+
+#hero-img8 {
+	animation-delay: 35s;
+}
+
+/* Keyframes for smooth fade + slide effect */
+@keyframes slideShow {
+	0% {
+		transform: translateX(100%);
+		/* Starts off-screen right */
+		opacity: 0;
+		z-index: 1;
+		/* Brings new image on top */
+	}
+
+	2.5% {
+		/* 1s: Slides in + fades in */
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	12.5% {
+		/* 5s: Stays fully visible */
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	15% {
+		/* 6s: Slides out + fades out */
+		transform: translateX(-100%);
+		opacity: 0;
+		z-index: 0;
+		/* Sends old image behind */
+	}
+
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+@media(min-width:786px){
+	body{font-size:2rem;}
+	.hero{height: 17em;}
+}
+section.description{
+	width: 90%;
+	height:11em;
+	display: flex;
+	margin-top: 1em;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap:1em;
+}
+
+.description-header{
+	font-size: 1.8em;
+	font-weight: 700;
+	text-align: center;
+	color: #121212;
+	
+}
+.description-text{
+	text-align: center;
+	color:var(--secondary-text-color);
+}
+.highlighted{
+	color:#5A4BDA;
+}
+section.description button{
+	box-sizing: content-box;
+	
+	width:12em;
+	padding: 0.6em 0;
+	border:none;
+	
+	background: var(--btn-bg);
+	font-size:1em;
+	color: #fff;
+	border-radius:0.33em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	margin-top: auto;
+}
+.infotabs{
+	height:16em;
+	width: 90%;
+	box-shadow: var(--shadow);
+	background: #fff;
+	border-radius: 0.44em;
+	position: relative;
+	top: -10%;
+	padding:1em;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap:0.5em;
+	align-content: center;
+	justify-content: center;
+}
+.infotabs .tabs{
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.tab-desc{
+	font-size: 0.7em;
+	color: var(--secondary-text-color);
+	text-align: center;
+}
+.tabs img{
+	height: 3em;
+	width: 3em;
+	transition-duration:0.1s;
+	
+}
+.tabs img:hover{
+	transform: scale(1.2);
+}
+
+
+
+section.categories{
+	
+	width: 90%;
+height: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap:1em;
+}
+.categories p{
+	text-align: center;
+	color: var(--secondary-text-color);
+}
+.category-box{
+	min-height: 11em;
+	width: 100%;
+	padding:1em;
+	box-sizing: border-box;
+	box-shadow: var(--shadow);
+	border-radius: 0.44em;
+	background-size: 100% 100%;
+	transition-duration:0.1s;
+
+	transform: scale(0.9);
+}
+.visible {
+	transform: scale(1);
+}
+@media(orientation:landscape){
+	.hero{height: 16em;}
+}
+.category-box:hover{
+	transform: scale(1.01);
+}
+.category-box>div{
+	min-width: 55%;
+	max-width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	gap:0.5em;
+	margin-top: 1em;
+
+}
+.category-box.right>*{
+	margin-left: auto;
+}
+.category-box.right>div{
+	display: flex;
+	justify-content: end;
+}
+.category-box#categ-cuisine{
+	background: url("../../tabbg/cuisine-bg.png") no-repeat;
+		background-size: 100% 100%;
+
+}
+.category-box#categ-monument{
+	background: url("../../tabbg/monument-bg.png") no-repeat;
+	background-size: 100% 100%;
+}
+.category-box#categ-festival{
+	background: url("../../tabbg/festival-bg.png") no-repeat;
+	background-size: 100% 100%;
+}
+.category-box#categ-culture{
+	background: url("../../tabbg/culture-bg.png") no-repeat;
+	background-size: 100% 100%;
+}
+#categ-festival * ,#categ-culture * {
+}
+.categ-box-opt{
+	padding: 0.2em 0.3em;
+	border:1px solid var(--secondary-text-color);
+	border-radius: 0.7em;
+
+	display: inline-block;
+	color: var(--secondary-text-color);
+	text-align: center;
+	height: 1.2em;
+}
+.category-box.right>h3{
+	height: 1em;
+	width: 100%;
+	text-align: right;
+	
+	 
+	 margin-left: auto;
+}
+.exp-btn{
+	font-weight: 700;
+
+}
+
+
+@media(min-width:786px){
+	.category-box{
+		min-height: 15em;
+	}
+}
+
+section.about{
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 3em;
+	gap:1em;
+}
+.about>*{
+	text-align: center;
+}
+.about>p{
+	color: var(--secondary-text-color);
+}
+

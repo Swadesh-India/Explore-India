@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'poppins';
+	src: url('../../Poppins/Poppins-Regular.ttf') format('truetype');
+}
+*{
+	margin: 0;
+	padding: 0;
+		font-family: poppins, sans-serif;
+
+}
+:root {
+	--secondary-bg: rgba(144, 80, 182, 0.18);
+	--btn-bg:#5A4BDA;
+	--btn-text-color:#fff;
+	--secondary-text-color:#535353;
+	 --shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;;
+	--body-bg: #fff;
+	--primary-text-color: black;
+	--border:#000;
+	--indicator-bg:#80808047;
+	
+	  /* Backgrounds */
+  
+  --bg-secondary: #F8F9FA;
+  --accent-light: #FFEBEE; /* Used in .pro-tip */
+  
+  /* Borders */
+  --border-color: #E9ECEF;
+  
+  /* Accent Colors */
+  --accent-color: #E74C3C;  /* Links */
+  --accent-hover: #C0392B;  /* Link hover state */
+  --accent-color-green:#22EF5E;
+  /* Typography */
+  --font-bold: 700;         /* Used in .section-title */
+}
+body {
+	background: var(--body-bg);
+	height: 100vh;
+	width: 100vw;
+	font-family: varela, sans-serif;
+	
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+main{
+	min-height:calc(100% - 10em);
+	position: relative;
+	top: 3em;
+	width: 100%;
+	box-sizing: content-box;
+	display: grid;
+	place-items: center;
+	padding-bottom: 2em;
+}
+@media(min-width:786px){
+	body{font-size:2rem;}
+	.hero{height: 17em;}
+}
