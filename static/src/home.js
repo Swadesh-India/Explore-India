@@ -5,7 +5,7 @@ Array.from(box).forEach((b) => {
    location.href = 'searcher.html?query='+query;
   } )
 })
-
+ 
 const tabs = document.getElementsByClassName('tabs')
 Array.from(tabs).forEach((tab) =>{
   tab.addEventListener('click',(e) =>{
