@@ -11,7 +11,7 @@ Array.from(tabs).forEach((tab) =>{
   tab.addEventListener('click',(e) =>{
   
     e.stopPropagation()
-    const text = e.currentTarget.children[1].innerText
+    const text = e.currentTarget.dataset.tab
     location.href = 'start.html?query='+text;
 
   } )
