@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyBroqUWDxPxD5dcNwrxG1Jm30_Yi3z5X04';
+const API_KEY = 'AIzaSyB_d-_00g-gvRJsdHCZlZjHW_eC2YFa5Sc';
 
 async function generateData(prompt) {
 console.log('geh')
