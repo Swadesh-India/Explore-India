@@ -21,7 +21,9 @@ form {
 	margin-top: 1em;
 }
 
-
+.solution-list strong{
+  font-size: 0.8em;
+}
 .form-input:not(#captcha) {
 	height: 100%;
 	width: 85%;
