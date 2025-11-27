@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: poppins, sans-serif;
+}
+
+/* =========================
+   LIGHT MODE VARIABLES
+   ========================= */
+:root {
+	--secondary-bg: rgba(144, 80, 182, 0.18);
+	--btn-bg:#5A4BDA;
+	--btn-text-color:#fff;
+	--secondary-text-color:#535353;
+	--shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	--body-bg: #fff;
+	--primary-text-color: #000;
+	--border:#000;
+	--indicator-bg:#80808047;
+
+	--bg-secondary: #F8F9FA;
+	--accent-light: #FFEBEE;
+	--border-color: #E9ECEF;
+
+	--accent-color: #E74C3C;
+	--accent-hover: #C0392B;
+	--accent-color-green:#22EF5E;
+
+	--font-bold: 700;
+	
+	--plate-bg:#e9edf9;
+	
+	/*home*/
+	--home-top-bg:linear-gradient(to bottom right,#E7F3F8,#E9E5FA);
+	--home-header-text:#121212;
+	--highlighted-text:#5A4BDA;
+--home-card-bg:#fff;
+--backdrop-shadow:
+  0px 3px 8px rgba(255, 255, 255, 0.20),
+  0px 6px 16px rgba(255, 255, 255, 0.12);
+--footer-bg:#f8f9fa;
+	--footer-heading-color:black;
+	--header-svg-color:#1f1f1f;
+
+
+
+--team-img-bg:#CED8DE29;
+
+
+--input-border:#00000080;
+}
+
+/* =========================
+   DARK MODE VARIABLES
+   (body.dark)
+   ========================= */
+body.dark {
+	--secondary-bg: rgba(255, 255, 255, 0.08);
+	--btn-bg:#7A68FF;
+	--btn-text-color:#fff;
+	--secondary-text-color:#d1d1d1;
+
+ --shadow: rgba(255, 255, 255, 0.30) 0px 1px 2px,
+rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+
+	--body-bg: #262626;
+	--primary-text-color: #f5f5f5;
+	--border:#444;
+
+	--indicator-bg:#ffffff2a;
+
+	--bg-secondary: #1A1A1A;
+	--accent-light: #2C1F1F;
+	--border-color: #333;
+
+	--accent-color: #FF6F6F;
+	--accent-hover: #FF4A4A;
+	--accent-color-green:#32FF73;
+	--plate-bg: transparent;
+	--home-top-bg: linear-gradient(
+  to right bottom,
+  rgb(70, 90, 110),     /* lighter top */
+  rgb(45, 55, 80),      /* mid layer */
+  rgb(25, 20, 40),      /* darker bottom */
+  #262626               /* footer blend */
+);
+	--home-header-text:#e0e0e0;
+--highlighted-text:#7A68FF;
+--home-card-bg:#262626;
+--backdrop-shadow: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.10)) drop-shadow(0px 0px 28px rgba(255, 255, 255, 0.05));
+--footer-bg:#1E1E1E;
+--footer-heading-color:#fff;
+--header-svg-color:#fff;
+
+
+--team-img-bg: #BBBBBB;
+	
+	--input-border:#DCDCDC80;
+
+}
+
+/* =========================
+   BASE STYLES
+   ========================= */
+body {
+	background: var(--body-bg);
+	height: 100vh;
+	width: 100vw;
+	color: var(--primary-text-color);
+	font-family: varela, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+main{
+	min-height:calc(100% - 10em);
+	position: relative;
+	top: 3em;
+	width: 100%;
+	box-sizing: content-box;
+	display: grid;
+	place-items: center;
+	padding-bottom: 2em;
+}
+
+/* Desktop Font Scale */
+@media(min-width:786px){
+	body{font-size:1.9rem;}
+	.hero{height: 17em;}
+}
