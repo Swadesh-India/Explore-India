@@ -13,7 +13,7 @@ Array.from(tabs).forEach((tab) =>{
   
     e.stopPropagation()
     const text = e.currentTarget.dataset.value;
-    location.href = 'start.html?query='+text;
+    location.href = 'template/start.html?query='+text;
 
   } )
 } )
@@ -22,7 +22,7 @@ Array.from(categ).forEach((cat) => {
   cat.addEventListener('click', (e) => {
     e.stopPropagation()
     const text = e.currentTarget.children[1].innerText
-    location.href = 'start.html?query=' + text;
+    location.href = 'template/start.html?query=' + text;
     
   })
 })
